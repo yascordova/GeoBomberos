@@ -1,0 +1,24 @@
+<ion-header>
+
+    <ion-navbar color="hcolor">
+      <ion-title>Info</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+    <ion-list no-lines>
+      <ion-list-header>
+        Miembros
+      </ion-list-header>
+      <ion-item *ngFor="let item of groupmembers" (click)="buddychat(item)">
+        <ion-avatar item-left>
+          <img src="{{item.photoURL}}">
+        </ion-avatar>
+        <h2>{{item.displayName}}</h2>
+        <p>Miembro</p>
+      </ion-item>
+    </ion-list>
+  
+  </ion-content>
